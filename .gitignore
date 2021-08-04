@@ -5,3 +5,6 @@
 /.vs
 /OOP/.vs/OOP/v16
 /OOP/OOP.Classes/obj
+/OOP/OOP.Automobile/bin/Debug/netcoreapp3.1
+/OOP/OOP.Automobile/obj
+/OOP/OOP.Classes/bin/Debug/netcoreapp3.1
