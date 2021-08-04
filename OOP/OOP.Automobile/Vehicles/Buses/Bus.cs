@@ -28,18 +28,18 @@ namespace OOP.Automobile.Vehicles.Buses
 
         public sealed override bool IsValid(string properties = "")
         {
-            properties += $"{TypeOfSeat.ToString()}:{SeatCount.ToString()}";
+            properties += $"TypeOfSeat::{TypeOfSeat.ToString()};SeatCount::{SeatCount.ToString()};";
             bool isValid = true;
             if (!base.IsValid(properties))
             {
                 isValid = false;
             }
-            else if (TypeOfSeat != SeaterType.Unknown)
+            if (TypeOfSeat != SeaterType.Unknown)
             {
                 Console.WriteLine("TypeOfSeat is not defined");
                 isValid = false;
             }
-            else if (SeatCount <= 0)
+            if (SeatCount <= 0)
             {
                 Console.WriteLine("SeatCount is not defined");
                 isValid = false;

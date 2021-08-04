@@ -77,34 +77,34 @@ namespace OOP.Automobile.Vehicles
 
         public override string ToString()
         {
-            return $"{Name}:{ChaseNumber}:{ManufactureYear}:{Color.ToString()}:{NumberOfWheels}:{CompanyName}";
+            return $"Name::{Name};ChaseNumber::{ChaseNumber};ManufactureYear::{ManufactureYear};Color::{Color.ToString()};NumberOfWheels::{NumberOfWheels};CompanyName::{CompanyName};";
         }
 
         public virtual bool IsValid(string properties = "")
         {
-            Console.WriteLine(ToString() + ":" + properties);
+            Console.WriteLine(ToString() + properties);
             bool isValid = true;
             if (TypeOfVehicle == VehicleType.UnKnown)
             {
                 Console.WriteLine("TypeofVehicle is not defined");
                 isValid = false;
             }
-            else if (string.IsNullOrEmpty(Name))
+            if (string.IsNullOrEmpty(Name))
             {
                 Console.WriteLine("Name is not defined");
                 isValid = false;
             }
-            else if (string.IsNullOrEmpty(ChaseNumber))
+            if (string.IsNullOrEmpty(ChaseNumber))
             {
                 Console.WriteLine("ChaseNumber is not defined");
                 isValid = false;
             }
-            else if (ManufactureYear <= 0 && ManufactureYear < 2000)
+            if (ManufactureYear <= 0 && ManufactureYear < 2000)
             {
                 Console.WriteLine("ManufactureYear is not defined");
                 isValid = false;
             }
-            else if (Color == Color.Empty)
+            if (Color == Color.Empty)
             {
                 Console.WriteLine("Color is not defined");
                 isValid = false;
@@ -114,22 +114,22 @@ namespace OOP.Automobile.Vehicles
                 Console.WriteLine("NumberOfWheels is not defined");
                 isValid = false;
             }
-            else if (CompanyName == Brand.UnKnown)
+            if (CompanyName == Brand.UnKnown)
             {
                 Console.WriteLine("CompanyName is not defined");
                 isValid = false;
             }
-            else if (CC > 50)
+            if (CC < 50)
             {
                 Console.WriteLine("CC is not defined");
                 isValid = false;
             }
-            else if (TypeOfMachine == MachineType.UnKnown)
+            if (TypeOfMachine == MachineType.UnKnown)
             {
                 Console.WriteLine("TypeOfMachine is not defined");
-                return false;
+                isValid = false;
             }
-            else if (TypeOfFuel == FuelType.UnKnown)
+            if (TypeOfFuel == FuelType.UnKnown)
             {
                 Console.WriteLine("TypeOfFuel is not defined");
                 isValid = false;

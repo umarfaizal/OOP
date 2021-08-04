@@ -35,7 +35,7 @@ namespace OOP.Automobile.Vehicles.Lorries
 
         public sealed override bool IsValid(string properties = "")
         {
-            properties += IsSupportsHeavyLoad?.ToString();
+            properties += $"IsSupportsHeavyLoad::{IsSupportsHeavyLoad?.ToString()};";
             bool isValid = base.IsValid(properties);
             //Console.WriteLine("IsSupportsHeavyLoad::" + IsSupportsHeavyLoad);
             if (IsSupportsHeavyLoad == null)
