@@ -10,12 +10,12 @@ namespace OOP.Automobile.Vehicles.Bikes
     {
         public HornetBike(string name) : base(name, Brand.Hyundai, 188, true)
         {
-
-        }
-        public HornetBike() : base("Hornet", Brand.Hyundai, 188, true)
-        {
             PSVersion = 6;
             Console.WriteLine($"The PS version of {Name} is {PSVersion}");
+        }
+        public HornetBike() : this("Hornet")
+        {
+            
         }
 
         public static implicit operator string(HornetBike bike)
