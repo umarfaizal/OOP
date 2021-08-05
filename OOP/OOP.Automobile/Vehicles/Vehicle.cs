@@ -77,7 +77,7 @@ namespace OOP.Automobile.Vehicles
 
         public override string ToString()
         {
-            return $"Name::{Name};ChaseNumber::{ChaseNumber};ManufactureYear::{ManufactureYear};Color::{Color.ToString()};NumberOfWheels::{NumberOfWheels};CompanyName::{CompanyName};";
+            return $"Name::{Name};ChaseNumber::{ChaseNumber};ManufactureYear::{ManufactureYear};Color::{Color.Name};NumberOfWheels::{NumberOfWheels};CompanyName::{CompanyName};";
         }
 
         public virtual bool IsValid(string properties = "")
@@ -141,7 +141,7 @@ namespace OOP.Automobile.Vehicles
         #region Operator definitions
         public static bool operator ==(Vehicle a, Vehicle b)
         {
-            if (a.TypeOfVehicle == b.TypeOfVehicle && a.ManufactureYear == b.ManufactureYear && a.CompanyName == b.CompanyName && a.CC == b.CC)
+            if (a.TypeOfVehicle == b.TypeOfVehicle && a.ManufactureYear == b.ManufactureYear && a.CompanyName == b.CompanyName && a.CC == b.CC && a.Color == b.Color)
                 return true;
             else return false;
         }
