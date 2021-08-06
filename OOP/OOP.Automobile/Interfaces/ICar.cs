@@ -8,7 +8,6 @@ namespace OOP.Automobile.Interfaces
     {
         bool IsAcAvailable { get; set; }
         bool IsSunRoofAvailable { get; set; }
-
         event Action AcStatusChanged;
     }
 }
