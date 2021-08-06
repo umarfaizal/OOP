@@ -5,10 +5,25 @@ using System.Drawing;
 
 namespace OOP.Automobile.Vehicles
 {
+    /// <summary>
+    /// Vehicle is the base class for all vehicle
+    /// It has common properties of all vehicles
+    /// WE can't create instance for abstract class, so it has support only inherit to other class
+    /// </summary>
     public abstract class Vehicle : IVehicle
     {
+        // Region is used to grouping the Fields or methods or else other's
         #region Private Declaration and Definitions
+        /// <summary>
+        /// Static property or variable will create memory on application runtime
+        /// This memory will clear only on application stop.
+        /// Readonly property or variable or methods can set the value only on Contructor. it is used to protect the value reassign after initialization of a class
+        /// </summary>
         public static readonly DateTime AppInitTime = DateTime.Now;
+        /// <summary>
+        /// Private variable or property or method can't access outside of the class
+        /// Global private variable naming convention should start with underscore and camel case
+        /// </summary>
         private MachineType _typeOfMachine = MachineType.UnKnown;
         private FuelType _typeOfFuel = FuelType.UnKnown;
         #endregion
@@ -18,6 +33,16 @@ namespace OOP.Automobile.Vehicles
         {
         }
 
+        /// <summary>
+        /// A Class can contain multiple constructor, but different input parameter
+        /// It supports overload called Constructor overload
+        /// Abstract class constructor we can call from derived class constructor using base keyword.
+        /// </summary>
+        /// <param name="name">name of the vehicle model like Pulsar or apache</param>
+        /// <param name="companyName">The Company who manufactured the vehicle like Tata or Hyundai or Mahindra</param>
+        /// <param name="cC">CC defines the output power of engine</param>
+        /// <param name="typeOfMachine">typeOfMachine defines whether vehile is Engine or motor model</param>
+        /// <param name="typeOfFuel">typeOfFuel defines vehicle Fuel Type like Electric or Diesel or else any other fuels </param>
         protected Vehicle(string name, Brand companyName, int cC, MachineType typeOfMachine, FuelType typeOfFuel)
         {
             Name = name;
@@ -38,6 +63,9 @@ namespace OOP.Automobile.Vehicles
         public virtual int NumberOfWheels { get; set; }
         public virtual Brand CompanyName { get; set; }
         public virtual int CC { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public MachineType TypeOfMachine
         {
             get

@@ -2,6 +2,13 @@
 
 namespace OOP.Automobile.Interfaces
 {
+    /// <summary>
+    /// IVehicle is the base declaration for all the vehicles. 
+    /// It has common properties declaration's for any vehicle
+    /// Interface is the blueprint of the definition class
+    /// we should define the interface properties and methods in derived class 
+    /// All the interface name prefix should come as "I".
+    /// </summary>
     public interface IVehicle
     {
         VehicleType TypeOfVehicle { get; set; }
