@@ -54,7 +54,7 @@ namespace OOP.Automobile.Vehicles
         #endregion
 
         #region Field Definitions
-        public const string TypeOfObject = "Vehicle";
+        internal const string TypeOfObject = "Vehicle";
         public abstract VehicleType TypeOfVehicle { get; set; }
         public string Name { get; set; }
         public string ChaseNumber { get; set; }
