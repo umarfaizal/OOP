@@ -1,13 +1,13 @@
 ﻿using OOP.Automobile.Enums;
 using OOP.Automobile.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace OOP.Automobile.Vehicles.Cars
 {
     public partial class Car : Vehicle, ICar
     {
+        public event Action AcStatusChanged;
+
         public override VehicleType TypeOfVehicle
         {
             get
