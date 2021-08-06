@@ -6,7 +6,7 @@ using System.Text;
 
 namespace OOP.Automobile.Vehicles.Cars
 {
-    public class Car : Vehicle, ICar
+    public partial class Car : Vehicle, ICar
     {
         private readonly VehicleType _typeofVehicle = VehicleType.Car;
         private readonly int _numberOfWheels = 4;
@@ -27,7 +27,11 @@ namespace OOP.Automobile.Vehicles.Cars
         public Car(string name, Brand companyName, int cC, MachineType typeOfMachine, FuelType typeOfFuel) : base(name, companyName, cC, typeOfMachine, typeOfFuel)
         {
 
-        }
+        }        
+    }
+
+    public partial class Car : Vehicle, ICar
+    {
         public override VehicleType TypeOfVehicle
         {
             get
@@ -54,6 +58,5 @@ namespace OOP.Automobile.Vehicles.Cars
                 throw new ArgumentException("Car wheels already defined we can't it");
             }
         }
-
     }
 }
