@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Cars.Electrics
 {
     public class AudiETronElectricCar : ElectricCar, IElectricCar
     {
-        public AudiETronElectricCar() : base(true, "Tron", Brand.Audi, 2000)
+        public AudiETronElectricCar() : base(true,VehicleName.Tron, Brand.Audi, 2000)
         {
         }
     }

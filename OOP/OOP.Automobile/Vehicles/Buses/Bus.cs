@@ -28,7 +28,7 @@ namespace OOP.Automobile.Vehicles.Buses
 
         public sealed override bool IsValid(string properties = "")
         {
-            properties += $"TypeOfSeat::{TypeOfSeat.ToString()};SeatCount::{SeatCount.ToString()};";
+            properties += $"TypeOfSeat::{TypeOfSeat};SeatCount::{SeatCount};";
             bool isValid = true;
             if (!base.IsValid(properties))
             {

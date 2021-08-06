@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Cars.Diesels
 {
     public class MahindraTharDieselCar : DieselCar, IDieselCar
     {
-        public MahindraTharDieselCar() : base(IgnitionQuality.Good, false, "Thar", Brand.Mahindra, 1500)
+        public MahindraTharDieselCar() : base(IgnitionQuality.Good, false, VehicleName.Thar, Brand.Mahindra, 1500)
         {
         }
     }

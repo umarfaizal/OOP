@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Bikes
 {
    public sealed class Apachebike : Bike, IBike
     {
-        public Apachebike() : base("Apache", Brand.TVS, 200, true)
+        public Apachebike() : base(VehicleName.Apache, Brand.TVS, 200, true)
         {
             PSVersion = 6;
             Console.WriteLine($"The PS version of {Name} is {PSVersion}" );

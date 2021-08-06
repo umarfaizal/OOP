@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Cars.Diesels
 {
     public class ToyotaFortunerDieselCar : DieselCar, IDieselCar
     {
-        public ToyotaFortunerDieselCar() : base(IgnitionQuality.Good, true, "Fortuner", Brand.Toyota, 2000)
+        public ToyotaFortunerDieselCar() : base(IgnitionQuality.Good, true, VehicleName.Fortuner, Brand.Toyota, 2000)
         {
         }
     }

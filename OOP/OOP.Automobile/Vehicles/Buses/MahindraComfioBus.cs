@@ -9,7 +9,7 @@ namespace OOP.Automobile.Vehicles.Buses
 
     public sealed class MahindraComfioBus : Bus, IBus
     {
-        public MahindraComfioBus() : base("Comfio", Brand.Mahindra, 1900, SeaterType.NormalSeating, 30)
+        public MahindraComfioBus() : base(VehicleName.Comfio, Brand.Mahindra, 1900, SeaterType.NormalSeating, 30)
         {
 
         }

@@ -9,7 +9,7 @@ namespace OOP.Automobile.Vehicles.Buses
 
     public sealed class AshokLeyLandLynxBus : Bus, IBus
     {
-        public AshokLeyLandLynxBus() : base("Lynx", Brand.AshokLeyLand, 2100, SeaterType.SemiSleeper, 30)
+        public AshokLeyLandLynxBus() : base(VehicleName.Lynx, Brand.AshokLeyLand, 2100, SeaterType.SemiSleeper, 30)
         {
 
         }

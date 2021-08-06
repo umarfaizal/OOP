@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Cars.Petrols
 {
     public class HyundaiCretaPetrolCar : PetrolCar, IPetrolCar
     {
-        public HyundaiCretaPetrolCar() : base(false, true, "Creta", Brand.Hyundai, 950)
+        public HyundaiCretaPetrolCar() : base(false, true, VehicleName.Creta, Brand.Hyundai, 950)
         {
 
         }

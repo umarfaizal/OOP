@@ -13,7 +13,7 @@ namespace OOP.Automobile.Vehicles.Bikes
             PSVersion = 6;
             Console.WriteLine($"The PS version of {Name} is {PSVersion}");
         }
-        public HornetBike() : this("Hornet")
+        public HornetBike() : this(VehicleName.Hornet)
         {
             
         }

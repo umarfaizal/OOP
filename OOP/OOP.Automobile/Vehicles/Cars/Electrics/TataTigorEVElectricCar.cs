@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Cars.Electrics
 {
     public class TataTigorEVElectricCar : ElectricCar, IElectricCar
     {
-        public TataTigorEVElectricCar() : base(name: "Tigor", cC: 1000, companyName: Brand.Tata, isFastCharging: false)
+        public TataTigorEVElectricCar() : base(name: VehicleName.Tigor, cC: 1000, companyName: Brand.Tata, isFastCharging: false)
         {
         }
     }

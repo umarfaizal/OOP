@@ -9,7 +9,7 @@ namespace OOP.Automobile.Vehicles.Buses
 
     public sealed class TataMarcopoloBus : Bus, IBus
     {
-        public TataMarcopoloBus() : base("Marcopolo", Brand.Tata, 2000, SeaterType.NormalSeating, 40)
+        public TataMarcopoloBus() : base(VehicleName.Marcopolo, Brand.Tata, 2000, SeaterType.NormalSeating, 40)
         {
 
         }

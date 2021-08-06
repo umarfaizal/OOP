@@ -8,7 +8,7 @@ namespace OOP.Automobile.Vehicles.Cars.Petrols
 {
     public class MarutiSwiftPetrolCar : PetrolCar, IPetrolCar
     {
-        public MarutiSwiftPetrolCar() : base(false, false, "Swift", Brand.Maruti, 1200)
+        public MarutiSwiftPetrolCar() : base(false, false, VehicleName.Swift, Brand.Maruti, 1200)
         {
 
         }
