@@ -8,6 +8,7 @@ namespace OOP.Automobile.Vehicles
     public abstract class Vehicle : IVehicle
     {
         #region Private Declaration and Definitions
+        public static readonly DateTime AppInitTime = DateTime.Now;
         private MachineType _typeOfMachine = MachineType.UnKnown;
         private FuelType _typeOfFuel = FuelType.UnKnown;
         #endregion
