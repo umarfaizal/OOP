@@ -1,13 +1,12 @@
 ﻿using OOP.Automobile.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using OOP.Automobile.Vehicles.General;
 
 namespace OOP.Automobile.Interfaces
 {
     public interface IBus : IVehicle
     {
         SeaterType TypeOfSeat { get; set; }
-        int SeatCount { get;  }
+        int SeatCount { get; }
+        event SeatTypeChangedEventHandler SeatTypeChanged;
     }
 }

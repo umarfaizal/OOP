@@ -1,5 +1,6 @@
 ﻿using OOP.Automobile.Enums;
 using OOP.Automobile.Interfaces;
+using OOP.Automobile.Vehicles.General;
 using System;
 
 namespace OOP.Automobile.Vehicles.Buses
@@ -7,11 +8,15 @@ namespace OOP.Automobile.Vehicles.Buses
     public class Bus : Vehicle, IBus
     {
         private readonly VehicleType _typeOfVehicle = VehicleType.Bus;
+        private SeaterType _typeOfSeat = SeaterType.Unknown;
+        public event SeatTypeChangedEventHandler SeatTypeChanged;
+
         protected Bus(string name, Brand companyName, int cC, SeaterType typeOfSeat, int seatCount) : base(name, companyName, cC, MachineType.Engine, FuelType.Diesel)
         {
             TypeOfSeat = typeOfSeat;
             SeatCount = seatCount;
         }
+
         public sealed override VehicleType TypeOfVehicle
         {
             get
@@ -23,7 +28,23 @@ namespace OOP.Automobile.Vehicles.Buses
                 throw new ArgumentException("Already vehicle type defined as Bus. Don't try to set it");
             }
         }
-        public SeaterType TypeOfSeat { get; set; }
+
+        public SeaterType TypeOfSeat
+        {
+            get
+            {
+                return _typeOfSeat;
+            }
+            set
+            {
+                if (_typeOfSeat != value)
+                {
+                    var seatTypeChangedEventArgs = new SeatTypeChangedEventArgs(_typeOfSeat, value);
+                    OnSeatTypeChanged(seatTypeChangedEventArgs);
+                }
+                _typeOfSeat = value;
+            }
+        }
         public int SeatCount { get; }
 
         public sealed override bool IsValid(string properties = "")
@@ -45,6 +66,15 @@ namespace OOP.Automobile.Vehicles.Buses
                 isValid = false;
             }
             return isValid;
+        }
+
+        protected virtual void OnSeatTypeChanged(SeatTypeChangedEventArgs e)
+        {
+            // SeatTypeChanged?.Invoke(this, e);
+            if (SeatTypeChanged != null)
+            {
+                SeatTypeChanged(this, e);
+            }
         }
     }
 }
