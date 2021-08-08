@@ -8,21 +8,54 @@ namespace OOP.Classes
         static void Main(string[] args)
         {
 
-            DeveloperBase developerBase = new DeveloperBase();
-
+            //DeveloperBase developerBase = new DeveloperBase();
+            //Console.WriteLine(developerBase.Skill);
+            //developerBase.Team = "dfsdf";
             Console.WriteLine("Hello World!");
             //Calculator.ProjectType = "";
-            Calculator.TestStatic = "";
-            Calculator calculator = new Calculator();
-            
-            var sty = Calculator.ReadonlyStatic;
+            //Calculator.TestStatic = "";
+            //var sty = Calculator.ReadonlyStatic;
+            //Calculator calculator = new Calculator();
+            //Calculator calculator2 = new Calculator();
+            //Calculator calculator3 = new Calculator();
+            //Calculator calculator4 = new Calculator();
+            //Calculator calculator5 = new Calculator();
             //Calculator.ReadonlyStatic = ""
             //Calculator.
-            var addition = calculator.Add(4, 5);
-            var subtraction = calculator.Sub(5, 2);
+            //var addition = calculator.Add(4, 5);
+            //var subtraction = calculator.Sub(5, 2);
 
-            AdvanceCalculator advanceCalculator = new AdvanceCalculator();
-            var mul = advanceCalculator.AdvMultiply();
+            //AdvanceCalculator advanceCalculator = new AdvanceCalculator();
+            //var mul = advanceCalculator.AdvMultiply();
+            //var a = calculator.Add(8, 9);
+            //var b = calculator.Add(5, 7, 1);
+            //var c = calculator.Add(3, 33, 2);
+            //var d = calculator.Add(2, 33, 12, 8);
+            //calculator.MyProperty = 5;
+            //calculator.Name = "Vignesh";
+            //Console.WriteLine(calculator.Name);
+            //calculator.Name = "Kumar";
+            //Console.WriteLine(calculator.Name);
+
+            //Student st = new Student();
+            //Student st2 = new Student(2);
+            //Student st3 = new Student("Vignesh");
+            //Student st4 = new Student(3, "kumar");
+            //Student st5 = new Student(6, "Arun", 890);
+            //Student st6 = new Student(23, "Ramesh", 457, "Bangalore");
+
+            OverrideBase1 overrideBase1 = new OverrideBase1();
+            var base1 = overrideBase1.GetString();
+
+            OverrideBase2 overrideBase2 = new OverrideBase2();
+            var base2 = overrideBase2.GetString();
+
+            OverrideBase3 overrideBase3 = new OverrideBase3();
+            var base3 = overrideBase3.GetString();
+
+            OverrideBase4 overrideBase4 = new OverrideBase4();
+            var base4 = overrideBase4.GetString();
+            //st6.Id = 789;
         }
     }
 
@@ -33,13 +66,34 @@ namespace OOP.Classes
         public static string TestStatic = "Test";
         public string Description = "It is used to do calculation";
         public readonly static string ReadonlyStatic;
+        public readonly string ReadonlyProps;
         public string ClassName;
+
+        public int MyProperty { get; set; }
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name + " is a person";
+            }
+            set
+            {
+                if (value == "Vignesh")
+                {
+                    Console.WriteLine(value + " is known person");
+                }
+                _name = value;
+            }
+        }
         static Calculator()
         {
             ReadonlyStatic = "ReadonlyStatic";
+
         }
         public Calculator()
         {
+            //ReadonlyStatic = "sdfsdfsdf";
             IsClassInit = true;
             ClassName = "Calculator";
 
@@ -50,6 +104,18 @@ namespace OOP.Classes
             ClassName = "new Class Name";
             int c = a + b;
             return c;
+        }
+        public int Add(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+        public int Add(int a, int b, int c, int d)
+        {
+            return a + b + c + d;
+        }
+        public int Add(int a, int b, int c, int d, int e)
+        {
+            return a + b + c + d + e;
         }
 
         public int Sub(int a, int b)
@@ -71,4 +137,118 @@ namespace OOP.Classes
             return Multiply(4, 5);
         }
     }
+
+
+    public class Student : BaseContructor
+    {
+
+        public Student() : base("")
+        {
+
+        }
+        public Student(string name): base(name)
+        {
+            //this.Name = name;
+        }
+        public Student(int id) : base("")
+        {
+            this.Id = id;
+        }
+
+        public Student(int id, string name) : base(name)
+        {
+            this.Id = id;
+            //this.Name = name;
+        }
+
+        public Student(int id, string name, int mobile) : this(id, name)
+        {
+            //this.Id = id;
+            //this.Name = name;
+            this.Mobile = mobile;
+        }
+
+        public Student(int id, string name, int mobile, string address) : this(id,name, mobile)
+        {
+            //this.Id = id;
+            //this.Name = name;
+            //this.Mobile = mobile;
+            this.Address = address;
+        }
+
+
+        public readonly int Id; 
+        //public string Name { get; set; }
+
+        public int Mobile { get; set; }
+        public string Address { get; set; }
+
+    }
+
+
+    public class BaseContructor
+    {
+        public BaseContructor(string name222)
+        {
+            this.Name = name222;
+        }
+
+        public readonly string Name;
+    }
+
+    public class OverrideBase1
+    {
+
+        public virtual string GetString()
+        {
+            return "OverrideBase1:::";
+        }
+    }
+
+    public class OverrideBase2 : OverrideBase1
+    {
+        public override string GetString()
+        {
+            var baseValue = base.GetString();
+            return "OverrideBase2:::";
+        }
+    }
+
+   
+    public class OverrideBase3 : OverrideBase1
+    {
+        public override string GetString()
+        {
+            var baseValue = base.GetString();
+            return baseValue + "OverrideBase3:::";
+        }
+    }
+   
+    public class OverrideBase4 : OverrideBase1
+    {
+        public sealed override string GetString()
+        {
+            var baseValue = base.GetString();
+            return baseValue + "OverrideBase4:::";
+        }
+    }
+
+    public class OverrideBase5 : OverrideBase3
+    {
+        public override string GetString()
+        {
+            var baseValue = base.GetString();
+            return "OverrideBase5:::";
+        }
+    }
+
+    //public class OverrideBase6 : OverrideBase4
+    //{
+    //    public override string GetString()
+    //    {
+    //        var baseValue = base.GetString();
+    //        return baseValue + "OverrideBase6:::";
+    //    }
+    //}
+
 }
