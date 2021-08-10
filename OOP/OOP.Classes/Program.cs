@@ -8,6 +8,13 @@ namespace OOP.Classes
         static void Main(string[] args)
         {
 
+            #region sdfsdf
+
+           //
+           //
+           //
+
+            #endregion
             //DeveloperBase developerBase = new DeveloperBase();
             //Console.WriteLine(developerBase.Skill);
             //developerBase.Team = "dfsdf";
@@ -44,18 +51,34 @@ namespace OOP.Classes
             //Student st5 = new Student(6, "Arun", 890);
             //Student st6 = new Student(23, "Ramesh", 457, "Bangalore");
 
-            OverrideBase1 overrideBase1 = new OverrideBase1();
-            var base1 = overrideBase1.GetString();
+            //OverrideBase1 overrideBase1 = new OverrideBase1();
+            //var base1 = overrideBase1.GetString();
 
-            OverrideBase2 overrideBase2 = new OverrideBase2();
-            var base2 = overrideBase2.GetString();
+            //OverrideBase2 overrideBase2 = new OverrideBase2();
+            //var base2 = overrideBase2.GetString();
 
-            OverrideBase3 overrideBase3 = new OverrideBase3();
-            var base3 = overrideBase3.GetString();
+            //OverrideBase3 overrideBase3 = new OverrideBase3();
+            //var base3 = overrideBase3.GetString();
 
-            OverrideBase4 overrideBase4 = new OverrideBase4();
-            var base4 = overrideBase4.GetString();
+            //OverrideBase4 overrideBase4 = new OverrideBase4();
+            //var base4 = overrideBase4.GetString();
             //st6.Id = 789;
+
+            //PartialClass partialClass = new PartialClass();
+            //partialClass.Address = "";
+            //partialClass.Mobile = "";
+            //partialClass.Name = "";
+
+            //TypesConversion typesConversion = new TypesConversion();
+            //typesConversion.Test();
+
+            CopyConstrcutor a = new CopyConstrcutor();
+            a.Id = 19;
+            a.Name = "sdfsdf";
+            CopyConstrcutor b = new CopyConstrcutor(a);
+
+            Console.WriteLine(b.Id);
+            Console.WriteLine(b.Name);
         }
     }
 
