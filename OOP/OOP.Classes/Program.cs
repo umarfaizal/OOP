@@ -1,5 +1,6 @@
 ﻿using System;
 using OOP.Development;
+using OOP.Sample;
 
 namespace OOP.Classes
 {
@@ -72,13 +73,19 @@ namespace OOP.Classes
             //TypesConversion typesConversion = new TypesConversion();
             //typesConversion.Test();
 
-            CopyConstrcutor a = new CopyConstrcutor();
-            a.Id = 19;
-            a.Name = "sdfsdf";
-            CopyConstrcutor b = new CopyConstrcutor(a);
+            //CopyConstrcutor a = new CopyConstrcutor();
+            //a.Id = 19;
+            //a.Name = "sdfsdf";
+            //CopyConstrcutor b = new CopyConstrcutor(a);
 
-            Console.WriteLine(b.Id);
-            Console.WriteLine(b.Name);
+            //Console.WriteLine(b.Id);
+            //Console.WriteLine(b.Name);
+
+            //ValidateInterface validateInterface = new ValidateInterface();
+            //validateInterface.Test();
+
+            ValidateException validateException = new ValidateException();
+            validateException.Test();
         }
     }
 

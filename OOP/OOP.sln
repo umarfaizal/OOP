@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Automobile", "OOP.Autom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Terminal", "OOP.Terminal\OOP.Terminal.csproj", "{B23A48E1-372D-45AC-88E7-8EBE9750C49E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.HR", "OOP.HR\OOP.HR.csproj", "{739BE9EB-5A80-4779-9DF3-62EF6795674C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.HR", "OOP.HR\OOP.HR.csproj", "{739BE9EB-5A80-4779-9DF3-62EF6795674C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.Development", "OOP.Development\OOP.Development.csproj", "{3F89263B-E503-4617-BF9C-64A8624123AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP.Development", "OOP.Development\OOP.Development.csproj", "{3F89263B-E503-4617-BF9C-64A8624123AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP.Sample", "OOP.Sample\OOP.Sample.csproj", "{8EA2E0E9-18D4-4F90-B39A-C661F40FF75C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{3F89263B-E503-4617-BF9C-64A8624123AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F89263B-E503-4617-BF9C-64A8624123AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F89263B-E503-4617-BF9C-64A8624123AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EA2E0E9-18D4-4F90-B39A-C661F40FF75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA2E0E9-18D4-4F90-B39A-C661F40FF75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA2E0E9-18D4-4F90-B39A-C661F40FF75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA2E0E9-18D4-4F90-B39A-C661F40FF75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
