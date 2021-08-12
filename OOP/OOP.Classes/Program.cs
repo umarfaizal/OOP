@@ -84,8 +84,11 @@ namespace OOP.Classes
             //ValidateInterface validateInterface = new ValidateInterface();
             //validateInterface.Test();
 
-            ValidateException validateException = new ValidateException();
-            validateException.Test();
+            //ValidateException validateException = new ValidateException();
+            //validateException.Test();
+            LoopSample loopSample = new LoopSample();
+            loopSample.DoWhile();
+            loopSample.While();
         }
     }
 
