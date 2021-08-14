@@ -10,9 +10,13 @@ namespace OOP.Terminal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            BuildMotors buildMotors = new BuildMotors();
-            buildMotors.ElectricCars();
+            //Console.WriteLine("Hello World!");
+            //BuildMotors buildMotors = new BuildMotors();
+            //buildMotors.ElectricCars();
+
+            AutomobileValidate automobileValidate = new AutomobileValidate();
+            //automobileValidate.CheckCarInstance();
+            automobileValidate.CheckIsValid();
         }
     }
 

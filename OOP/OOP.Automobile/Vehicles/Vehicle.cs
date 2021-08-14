@@ -106,6 +106,7 @@ namespace OOP.Automobile.Vehicles
 
         public override string ToString()
         {
+            var st = base.ToString();
             return $"Name::{Name};ChaseNumber::{ChaseNumber};ManufactureYear::{ManufactureYear};Color::{Color.Name};NumberOfWheels::{NumberOfWheels};CompanyName::{CompanyName};";
         }
 
@@ -169,7 +170,7 @@ namespace OOP.Automobile.Vehicles
 
         #region Operator definitions
         public static bool operator ==(Vehicle a, Vehicle b)
-        { 
+        {
             if (a.TypeOfVehicle == b.TypeOfVehicle && a.ManufactureYear == b.ManufactureYear && a.CompanyName == b.CompanyName && a.CC == b.CC && a.Color == b.Color)
                 return true;
             else return false;

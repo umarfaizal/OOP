@@ -158,11 +158,11 @@ namespace OOP.Classes
             //#endregion
 
 
-            #region Value and reference type
-            ValidateValueType validateValueType = new ValidateValueType();
-            validateValueType.Test();
+            //#region Value and reference type
+            //ValidateValueType validateValueType = new ValidateValueType();
+            //validateValueType.Test();
 
-            #endregion
+            //#endregion
 
 
         }

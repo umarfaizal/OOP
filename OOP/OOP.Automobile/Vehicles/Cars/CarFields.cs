@@ -45,7 +45,7 @@ namespace OOP.Automobile.Vehicles.Cars
             }
             set
             {
-                throw new ArgumentException("Car wheels already defined we can't it");
+                throw new ArgumentException("Car wheels already defined we can't set it");
             }
         }
 
