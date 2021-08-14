@@ -169,7 +169,7 @@ namespace OOP.Automobile.Vehicles
 
         #region Operator definitions
         public static bool operator ==(Vehicle a, Vehicle b)
-        {
+        { 
             if (a.TypeOfVehicle == b.TypeOfVehicle && a.ManufactureYear == b.ManufactureYear && a.CompanyName == b.CompanyName && a.CC == b.CC && a.Color == b.Color)
                 return true;
             else return false;

@@ -1,5 +1,4 @@
 ﻿using System;
-using OOP.Development;
 using OOP.Sample;
 
 namespace OOP.Classes
@@ -11,9 +10,9 @@ namespace OOP.Classes
 
             #region sdfsdf
 
-           //
-           //
-           //
+            //
+            //
+            //
 
             #endregion
             //DeveloperBase developerBase = new DeveloperBase();
@@ -86,9 +85,86 @@ namespace OOP.Classes
 
             //ValidateException validateException = new ValidateException();
             //validateException.Test();
-            LoopSample loopSample = new LoopSample();
-            loopSample.DoWhile();
-            loopSample.While();
+            //LoopSample loopSample = new LoopSample();
+            //loopSample.DoWhile();
+            //loopSample.While();
+
+
+            ProtectedInternalValidate protectedInternalValidate = new ProtectedInternalValidate();
+            ProtectedInternalBase protectedInternalBase = new ProtectedInternalBase();
+            ProtectedInternalDerived protectedInternalDerived = new ProtectedInternalDerived();
+
+
+            //int a = 10;
+            //int b = 11;
+            //bool c = a != b;
+            //if (a != b)
+            //{
+
+            //}
+            //else
+            //{
+
+            //}
+
+            //#region Operator Overloading
+            //StudentSample s1 = new StudentSample();
+            //s1.Id = 10;
+            //s1.Name = "Vignesh";
+
+            //StudentSample s2 = new StudentSample();
+            //s2.Id = 10;
+            //s2.Name = "Vignesh";
+
+            //if(s1.Id == s2.Id && s1.Name == s2.Name)
+            //{
+            //    Console.WriteLine("Without operator overloading Condition true");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Without operator overloading Condition false");
+            //}
+
+            //if(s1 == s2)
+            //{
+            //    Console.WriteLine("With operator overloading Condition true");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("With operator overloading Condition false");
+            //}
+
+            //if (s1 != s2)
+            //{
+            //    Console.WriteLine("With operator overloading Condition true");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("With operator overloading Condition false");
+            //}
+
+            //#endregion
+
+            //#region Type Conversion Overloading
+            //int i = 10;
+            //long l = i; // implicit 
+            //long k = 100;
+            //int j = (int)k; // Expicit
+
+            //StudentSample s3 = new StudentSample();
+            //s3.Name = "kumar";
+
+            //StudentSample s4 = s3;
+            //#endregion
+
+
+            #region Value and reference type
+            ValidateValueType validateValueType = new ValidateValueType();
+            validateValueType.Test();
+
+            #endregion
+
+
         }
     }
 
@@ -179,7 +255,7 @@ namespace OOP.Classes
         {
 
         }
-        public Student(string name): base(name)
+        public Student(string name) : base(name)
         {
             //this.Name = name;
         }
@@ -201,7 +277,7 @@ namespace OOP.Classes
             this.Mobile = mobile;
         }
 
-        public Student(int id, string name, int mobile, string address) : this(id,name, mobile)
+        public Student(int id, string name, int mobile, string address) : this(id, name, mobile)
         {
             //this.Id = id;
             //this.Name = name;
@@ -210,7 +286,7 @@ namespace OOP.Classes
         }
 
 
-        public readonly int Id; 
+        public readonly int Id;
         //public string Name { get; set; }
 
         public int Mobile { get; set; }
@@ -247,7 +323,7 @@ namespace OOP.Classes
         }
     }
 
-   
+
     public class OverrideBase3 : OverrideBase1
     {
         public override string GetString()
@@ -256,7 +332,7 @@ namespace OOP.Classes
             return baseValue + "OverrideBase3:::";
         }
     }
-   
+
     public class OverrideBase4 : OverrideBase1
     {
         public sealed override string GetString()

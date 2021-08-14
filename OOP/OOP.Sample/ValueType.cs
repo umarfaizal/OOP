@@ -4,11 +4,13 @@ using System.Text;
 
 namespace OOP.Sample
 {
+    // value Type
     public struct ValueType
     {
         public int Id { get; set; }
         public string Name { get; set; }
     }
+
 
     public class ReferenceType
     {
